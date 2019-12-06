@@ -2,7 +2,7 @@ using BinaryProvider # requires BinaryProvider 0.3.0 or later
 
 # Parse some basic command-line arguments
 const verbose = "--verbose" in ARGS
-const prefix = Prefix(get([a for a in ARGS if a != "--verbose"], 1, joinpath(@__DIR__, "usr")))
+const prefix = Prefix("/usr/local/julia/deps/mkl")
 products = [
     LibraryProduct(prefix, ["libmkl_core", "mkl_core"], :libmkl_core),
     LibraryProduct(prefix, ["libmkl_rt", "mkl_rt"], :libmkl_rt),
